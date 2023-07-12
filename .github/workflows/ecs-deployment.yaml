@@ -39,7 +39,7 @@ jobs:
           - name: Build , tag and push to ECR
             id: build-image
             env:
-                REGISTRY: ${{setps.login-ecr.outputs.registry}}  
+                REGISTRY: ${{steps.login-ecr.outputs.registry}}  
                 REPOSITORY: xashy-webapp
                 IMAGE_TAG: ${{github.sha}}
                 
