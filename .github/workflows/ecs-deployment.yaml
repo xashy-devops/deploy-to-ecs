@@ -21,7 +21,7 @@ jobs:
           - name: package with maven
             run:  mvn package
           - name: code analysis with sonarqube 
-            run: mvn sonar:sonar -Dsonar.projectKey=xashy-web-project -Dsonar.host.url=http://35.155.206.189:9000 -Dsonar.login=569078e0884dce8d1e6b3d09fd312b57c1d35871
+            run: mvn sonar:sonar -Dsonar.projectKey=xashy-web-project -Dsonar.host.url=http://35.155.206.189:9000 -Dsonar.token=569078e0884dce8d1e6b3d09fd312b57c1d35871
                 #mvn sonar:sonar -Dsonar.projectKey=xashy-web-project -Dsonar.host.url=${{secrets.SONAR_HOST_URL}} -Dsonar.token=${{secrets.SONAR_LOGIN_TOKEN}}
           - name: upload to github packages
             run: mvn --batch-mode deploy
